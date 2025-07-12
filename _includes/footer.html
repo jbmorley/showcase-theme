@@ -1,0 +1,10 @@
+<footer>
+    <p>Copyright &copy; {{ site.copyright }}</p>
+    <nav>
+        <ul>
+            {% for link in site.footer %}
+                <li><a href="{{ link.href }}">{{ link.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</footer>
