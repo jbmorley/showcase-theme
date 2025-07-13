@@ -156,6 +156,14 @@ ul.features {
     row-gap: var(--vertical-spacing);
 }
 
+@media (max-width: 768px) {
+    ul.features {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
 ul.features li {
     text-align: center;
 }
