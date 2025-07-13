@@ -160,12 +160,6 @@ ul.features li {
     text-align: center;
 }
 
-@media (max-width: 760px) {
-    .content {
-        margin: 2rem;
-    }
-}
-
 footer {
     max-width: var(--content-width);
     margin: auto;
