@@ -1,9 +1,13 @@
 :root {
     --brand-color: red;
+    --showcase-color-high: red;
+    --showcase-color-low: red;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --brand-color: red;
+        --showcase-color-high: red;
+        --showcase-color-low: red;
     }
 }
