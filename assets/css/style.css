@@ -209,9 +209,12 @@ footer nav ul li {
 
 .showcase {
     background-image: radial-gradient(var(--showcase-color-high), var(--showcase-color-low));
-    width: 100vw;
     transition: background-image 0.3s ease-in-out;
     margin: calc(2 * var(--vertical-spacing)) 0;
     font-weight: 400;
     text-align: center;
+}
+
+.showcase img {
+    display: block;
 }
