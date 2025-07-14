@@ -147,6 +147,10 @@ ul.navigation > li {
     padding: 0 calc(2 * var(--vertical-spacing));
 }
 
+.content img {
+    max-width: 100%;
+}
+
 ul.features {
     list-style: none;
     padding: 0;
