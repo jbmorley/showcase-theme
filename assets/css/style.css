@@ -1,27 +1,44 @@
 @import url("colors.css");
 
 :root {
+    --brand-color: red;
+    --showcase-color-high: red;
+    --showcase-color-low: red;
+
     --primary-foreground-color: #000000;
     --secondary-foreground-color: gray;
     --background-color: #ffffff;
     --navigation-background: rgba(255, 255, 255, 0.7);
     --primary-action-background-color: #007aff;
+
+    --primary-highlight-color: lightyellow;
+    --secondary-highlight-color: palegoldenrod;
+
+    --symbol-filter: 0;
+
     --content-width: 900px;
     --vertical-spacing: 1rem;
 
     --line-weight: 0.5px;
-    --symbol-filter: 0;
+
 }
 
 @media (prefers-color-scheme: dark) {
 
     :root {
+        --brand-color: red;
+        --showcase-color-high: red;
+        --showcase-color-low: red;
+
         --primary-foreground-color: #ffffff;
         --secondary-foreground-color: gray;
         --background-color: #171616;
-
         --navigation-background: rgba(24, 24, 24, 0.7);
         --primary-action-background-color: #0a84ff;
+
+        --primary-highlight-color: #22221a;
+        --secondary-highlight-color: #3c3a1f;
+
         --symbol-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg) brightness(103%) contrast(102%);
     }
 
@@ -150,6 +167,64 @@ ul.navigation > li {
 .content img {
     max-width: 100%;
     height: auto;
+}
+
+.content-sidebar {
+    max-width: var(--content-width);
+    margin: auto;
+    display: grid;
+    grid-template-areas: 'left-sidebar' 'main-content';
+}
+
+.content-sidebar h1 {
+    text-align: left;
+    border-bottom: var(--line-weight) solid var(--secondary-foreground-color);
+    padding-bottom: 0.5rem;
+}
+
+@media (min-width:768px) {
+
+    .content-sidebar {
+        grid-template-columns: 280px auto;
+        grid-template-areas:
+            'left-sidebar main-content';
+        grid-gap: 1rem;
+    }
+
+}
+
+left-sidebar {
+    grid-area: 'left-sidebar';
+    border-bottom: var(--line-weight) solid var(--secondary-foreground-color);
+}
+
+@media (min-width:768px) {
+
+    left-sidebar {
+        border-right: var(--line-weight) solid var(--secondary-foreground-color);
+        margin-right: 1rem;
+        border-bottom: 0;
+    }
+
+}
+
+left-sidebar ul {
+    list-style: none;
+}
+
+left-sidebar > ul {
+    padding-left: 0;
+}
+
+main-content {
+    grid-area: 'main-content';
+    overflow-x: wrap;
+}
+
+aside {
+    background-color: var(--primary-highlight-color);
+    padding: calc(var(--vertical-spacing)) calc(var(--vertical-spacing) * 2);
+    clear: both;
 }
 
 ul.features {

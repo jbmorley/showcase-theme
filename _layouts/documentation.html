@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<header>
+    <h1>Documentation</h1>
+</header>
+
+<div class="content-sidebar">
+    <left-sidebar class="tree">
+        {% file_tree docs %}
+    </left-sidebar>
+    <main-content>
+        {{ content }}
+    </main-content>
+</div>
