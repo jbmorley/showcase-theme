@@ -185,6 +185,7 @@ ul.navigation > li {
 .content-sidebar {
     max-width: var(--content-width);
     margin: auto;
+    padding: 0 calc(2 * var(--vertical-spacing));
     display: grid;
     grid-template-areas: 'left-sidebar' 'main-content';
 }
