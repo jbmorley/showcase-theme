@@ -96,6 +96,9 @@ hr {
 
 pre, code {
     background-color: var(--secondary-background-color);
+}
+
+code {
     font-size: 0.8em;
 }
 
