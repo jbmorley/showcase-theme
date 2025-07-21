@@ -5,7 +5,8 @@
 
     --primary-foreground-color: #000000;
     --secondary-foreground-color: gray;
-    --background-color: #ffffff;
+    --primary-background-color: #ffffff;
+    --secondary-background-color: #f0f0f0;
     --navigation-background: rgba(255, 255, 255, 0.7);
     --primary-action-background-color: #007aff;
 
@@ -30,7 +31,8 @@
 
         --primary-foreground-color: #ffffff;
         --secondary-foreground-color: gray;
-        --background-color: #171616;
+        --primary-background-color: #171616;
+        --secondary-background-color: #222222;
         --navigation-background: rgba(24, 24, 24, 0.7);
         --primary-action-background-color: #0a84ff;
 
@@ -48,7 +50,7 @@ body {
     font-size: 17px;
     margin: 0;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    background-color: var(--background-color);
+    background-color: var(--primary-background-color);
     color: var(--primary-foreground-color);
 }
 
@@ -92,8 +94,21 @@ hr {
     border-bottom: var(--line-weight) solid var(--secondary-foreground-color);
 }
 
+pre, code {
+    background-color: var(--secondary-background-color);
+}
+
+code {
+    padding: 0 0.2em;
+    border-radius: 0.2em;
+}
+
 ul {
     margin-bottom: calc(2 * var(--vertical-spacing));
+}
+
+li {
+    line-height: 1.5em;
 }
 
 li > ul {
@@ -183,7 +198,7 @@ ul.navigation > li {
 @media (min-width:768px) {
 
     .content-sidebar {
-        grid-template-columns: 280px auto;
+        grid-template-columns: 200px auto;
         grid-template-areas:
             'left-sidebar main-content';
         grid-gap: 1rem;
@@ -239,8 +254,6 @@ ul.features {
         grid-template-columns: 1fr;
     }
 }
-
-
 
 ul.features li {
     text-align: center;
