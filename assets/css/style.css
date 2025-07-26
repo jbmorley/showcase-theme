@@ -146,6 +146,11 @@ ul.navigation > li {
     padding: 0.4em;
 }
 
+#toc:has(> li) {
+    padding-bottom: calc(2 * var(--vertical-spacing));
+    border-bottom: var(--line-weight) solid var(--secondary-foreground-color);
+}
+
 .header {
     text-align: center;
 }
