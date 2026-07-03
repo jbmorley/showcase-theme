@@ -183,6 +183,7 @@ ul.navigation > li {
     padding: 1rem 1.6rem;
     text-decoration: none;
     display: inline-block;
+    font-weight: bold;
 }
 
 .content {
