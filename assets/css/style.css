@@ -52,6 +52,10 @@ body {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     background-color: var(--primary-background-color);
     color: var(--primary-foreground-color);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 a {
@@ -187,6 +191,11 @@ ul.navigation > li {
     padding: 0 calc(2 * var(--vertical-spacing));
 }
 
+body > .content {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .content img {
     max-width: 100%;
     height: auto;
@@ -272,7 +281,7 @@ ul.features li {
 
 footer {
     max-width: var(--content-width);
-    margin: auto;
+    margin: auto auto 0 auto;
     padding: 2em;
     text-align: center;
     color: var(--secondary-foreground-color);
