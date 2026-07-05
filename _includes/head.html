@@ -6,6 +6,7 @@
     {% if site.author %}<meta name="author" content="{{ site.author }}">{% endif %}
     <meta property="og:title" content="{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}">
     {% if site.description %}<meta property="og:description" content="{{ site.description }}">{% endif %}
+    {% if site.image %}<meta property="og:image" content="{{ site.image | absolute_url }}">{% endif %}
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
