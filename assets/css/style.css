@@ -203,6 +203,7 @@ ul.navigation > li {
 }
 
 .content {
+    width: 100%;
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 0 calc(2 * var(--vertical-spacing));
@@ -214,6 +215,7 @@ ul.navigation > li {
 }
 
 .content-sidebar {
+    width: 100%;
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 0 calc(2 * var(--vertical-spacing));
