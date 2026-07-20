@@ -52,6 +52,7 @@ title: Showcase
 author: Jason Morley
 email: developer@jbmorley.co.uk
 description: Showcase website
+platforms: Optional Supported Platforms
 url: "https://jbmorley.co.uk"
 baseurl: ""
 repository: https://github.com/jbmorley/showcase-theme
