@@ -182,12 +182,6 @@ ul.navigation > li {
     margin-bottom: var(--vertical-spacing);
 }
 
-.platforms {
-    text-align: center;
-    color: var(--secondary-foreground-color);
-    margin-bottom: var(--vertical-spacing);
-}
-
 .actions {
     text-align: center;
 }
