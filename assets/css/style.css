@@ -188,13 +188,8 @@ ul.navigation > li {
 
 .content {
     max-width: var(--content-width);
-    margin: auto;
+    margin: 0 auto;
     padding: 0 calc(2 * var(--vertical-spacing));
-}
-
-body > .content {
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .content img {
@@ -204,7 +199,7 @@ body > .content {
 
 .content-sidebar {
     max-width: var(--content-width);
-    margin: auto;
+    margin: 0 auto;
     padding: 0 calc(2 * var(--vertical-spacing));
     display: grid;
     grid-template-areas: 'left-sidebar' 'main-content';
