@@ -8,13 +8,15 @@ This is exclusively intended to showcase the [various apps I write](https://jbmo
 
 ## Plugins
 
-This theme expects the following plugins:
+The theme depends on the following plugins:
 
   - [jekyll-environment-variables](https://github.com/atticoos/jekyll-environment-variables)
   - jekyll-feed
   - [jekyll-gfm-admonitions](https://helveg.github.io/jekyll-gfm-admonitions/)
   - [jekyll-image-size](https://github.com/generalui/jekyll-image-size)
   - [jekyll-toc](https://github.com/toshimaru/jekyll-toc)
+
+These are defined in the theme gem and activated automatically by placing the theme in the `jekyll_plugins` group.
 
 ## Gemfile
 
@@ -24,14 +26,8 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.2.0"
 gem "webrick", "~> 1.7"
 
-gem "theme", path: "_theme"
-
 group :jekyll_plugins do
-  gem 'jekyll-environment-variables'
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-image-size", "~> 1.2"
-  gem "jekyll-toc"
-  gem 'jekyll-gfm-admonitions'
+  gem "theme", path: "_theme"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -78,13 +74,6 @@ footer:
     href: /license
   - title: More Software
     href: https://jbmorley.co.uk/software/
-
-plugins:
-  - jekyll-environment-variables
-  - jekyll-feed
-  - jekyll-gfm-admonitions
-  - jekyll-image-size
-  - jekyll-toc
 
 toc:
   ordered_list: true
