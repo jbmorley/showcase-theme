@@ -197,8 +197,10 @@ ul.navigation > li {
 }
 
 .content {
+    box-sizing: border-box;
     width: 100%;
     max-width: var(--content-width);
+    min-width: 0;
     margin: 0 auto;
     padding: 0 calc(2 * var(--vertical-spacing));
 }
@@ -209,8 +211,10 @@ ul.navigation > li {
 }
 
 .content-sidebar {
+    box-sizing: border-box;
     width: 100%;
     max-width: var(--content-width);
+    min-width: 0;
     margin: 0 auto;
     padding: 0 calc(2 * var(--vertical-spacing));
     display: grid;
