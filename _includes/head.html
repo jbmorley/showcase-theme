@@ -1,16 +1,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+
     {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
     {% if site.author %}<meta name="author" content="{{ site.author }}">{% endif %}
     <meta property="og:title" content="{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}">
     {% if site.description %}<meta property="og:description" content="{{ site.description }}">{% endif %}
     {% if site.image %}<meta property="og:image" content="{{ site.image | absolute_url }}">{% endif %}
+
+    {% assign file = site.static_files | where: "path", "/favicon.ico" | first %}
+    {% if file %}<link rel="icon" sizes="any" href="/favicon.ico">{% endif %}
+
+    {% assign file = site.static_files | where: "path", "/favicon-16x16.png" | first %}
+    {% if file %}<link rel="icon" type="image/png" sizes="16x16" href="{{ file.path }}">{% endif %}
+
+    {% assign file = site.static_files | where: "path", "/favicon-32x32.png" | first %}
+    {% if file %}<link rel="icon" type="image/png" sizes="32x32" href="{{ file.path }}">{% endif %}
+
+    {% assign file = site.static_files | where: "path", "/favicon-48x48.png" | first %}
+    {% if file %}<link rel="icon" type="image/png" sizes="48x48" href="{{ file.path }}">{% endif %}
+
+    {% assign file = site.static_files | where: "path", "/apple-touch-icon.png" | first %}
+    {% if file %}<link rel="apple-touch-icon" sizes="180x180" href="{{ file.path }}">{% endif %}
+
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
+
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css" media="(prefers-color-scheme: dark)">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+
 </head>
