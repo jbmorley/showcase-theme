@@ -363,6 +363,7 @@ left-sidebar > ul {
 main-content {
     grid-area: 'main-content';
     overflow-x: wrap;
+    min-width: 0;
 }
 
 aside {
