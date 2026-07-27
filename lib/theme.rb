@@ -10,4 +10,5 @@ require "jekyll-toc"
 
 # Activate the theme's own plugins.
 
+require_relative "theme/file_hash"
 require_relative "theme/file_tree"

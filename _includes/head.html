@@ -11,19 +11,19 @@
     {% if site.image %}<meta property="og:image" content="{{ site.image | absolute_url }}">{% endif %}
 
     {% assign file = site.static_files | where: "path", "/favicon.ico" | first %}
-    {% if file %}<link rel="icon" sizes="any" href="/favicon.ico">{% endif %}
+    {% if file %}<link rel="icon" sizes="any" href="/favicon.ico?v={{ file.path | file_hash }}">{% endif %}
 
     {% assign file = site.static_files | where: "path", "/favicon-16x16.png" | first %}
-    {% if file %}<link rel="icon" type="image/png" sizes="16x16" href="{{ file.path }}">{% endif %}
+    {% if file %}<link rel="icon" type="image/png" sizes="16x16" href="{{ file.path }}?v={{ file.path | file_hash }}">{% endif %}
 
     {% assign file = site.static_files | where: "path", "/favicon-32x32.png" | first %}
-    {% if file %}<link rel="icon" type="image/png" sizes="32x32" href="{{ file.path }}">{% endif %}
+    {% if file %}<link rel="icon" type="image/png" sizes="32x32" href="{{ file.path }}?v={{ file.path | file_hash }}">{% endif %}
 
     {% assign file = site.static_files | where: "path", "/favicon-48x48.png" | first %}
-    {% if file %}<link rel="icon" type="image/png" sizes="48x48" href="{{ file.path }}">{% endif %}
+    {% if file %}<link rel="icon" type="image/png" sizes="48x48" href="{{ file.path }}?v={{ file.path | file_hash }}">{% endif %}
 
     {% assign file = site.static_files | where: "path", "/apple-touch-icon.png" | first %}
-    {% if file %}<link rel="apple-touch-icon" sizes="180x180" href="{{ file.path }}">{% endif %}
+    {% if file %}<link rel="apple-touch-icon" sizes="180x180" href="{{ file.path }}?v={{ file.path | file_hash }}">{% endif %}
 
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
