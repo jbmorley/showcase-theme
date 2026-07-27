@@ -100,7 +100,7 @@ body {
 
 a {
     text-decoration: underline;
-    color: var(--primary-foreground-color);
+    color: var(--brand-color);
 }
 
 a:hover {
@@ -247,6 +247,7 @@ ul.navigation {
 
 ul.navigation a {
     text-decoration: none;
+    color: var(--primary-foreground-color);
 }
 
 ul.navigation > li {
