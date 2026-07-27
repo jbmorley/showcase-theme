@@ -16,7 +16,9 @@ layout: default
                 <h1>{{ page.title }}</h1>
             </header>
         {% endif %}
-        {{ content | toc_only }}
+        <div class="toc">
+            {{ content | toc_only }}
+        </div>
         {{ content | inject_anchors }}
     </main-content>
 </div>
