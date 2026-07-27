@@ -7,3 +7,7 @@ require "jekyll-feed"
 require "jekyll-gfm-admonitions"
 require "jekyll-image-size"
 require "jekyll-toc"
+
+# Activate the theme's own plugins.
+
+require_relative "theme/file_tree"
