@@ -13,6 +13,26 @@
     --primary-highlight-color: lightyellow;
     --secondary-highlight-color: palegoldenrod;
 
+    --admonition-note-color: #0969da;
+    --admonition-note-background-color: #ddf4ff;
+    --admonition-note-code-background: #c8e8fa;
+
+    --admonition-tip-color: #1a7f37;
+    --admonition-tip-background-color: #dafbe1;
+    --admonition-tip-code-background: #c3f0d0;
+
+    --admonition-important-color: #8250df;
+    --admonition-important-background-color: #fbefff;
+    --admonition-important-code-background: #f0ddff;
+
+    --admonition-warning-color: #9a6700;
+    --admonition-warning-background-color: #fff8c5;
+    --admonition-warning-code-background: #f8e6a0;
+
+    --admonition-caution-color: #cf222e;
+    --admonition-caution-background-color: #ffebe9;
+    --admonition-caution-code-background: #ffd8d6;
+
     --symbol-filter: 0;
 
     --content-width: 900px;
@@ -38,6 +58,26 @@
 
         --primary-highlight-color: #22221a;
         --secondary-highlight-color: #3c3a1f;
+
+        --admonition-note-color: #2f81f7;
+        --admonition-note-background-color: rgba(56, 139, 253, 0.1);
+        --admonition-note-code-background: #1f3a5f;
+
+        --admonition-tip-color: #3fb950;
+        --admonition-tip-background-color: rgba(46, 160, 67, 0.1);
+        --admonition-tip-code-background: #1f3d29;
+
+        --admonition-important-color: #a371f7;
+        --admonition-important-background-color: rgba(163, 113, 247, 0.1);
+        --admonition-important-code-background: #33234a;
+
+        --admonition-warning-color: #d29922;
+        --admonition-warning-background-color: rgba(187, 128, 9, 0.1);
+        --admonition-warning-code-background: #4a3a12;
+
+        --admonition-caution-color: #f85149;
+        --admonition-caution-background-color: rgba(248, 81, 73, 0.1);
+        --admonition-caution-code-background: #4a2220;
 
         --symbol-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg) brightness(103%) contrast(102%);
     }
@@ -110,6 +150,69 @@ code {
 
 pre:has(> code.language-mermaid), code.language-mermaid {
     background-color: var(--primary-background-color);
+}
+
+.markdown-alert {
+    padding: 1em;
+    margin: var(--vertical-spacing) 0;
+    border-left: 0.3em solid var(--admonition-color, var(--secondary-foreground-color));
+    border-radius: 0.2em;
+    background-color: var(--admonition-background, var(--secondary-background-color));
+}
+
+.markdown-alert > :first-child {
+    margin-top: 0;
+}
+
+.markdown-alert > :last-child {
+    margin-bottom: 0;
+}
+
+.markdown-alert code, .markdown-alert .hljs {
+    background-color: var(--admonition-code-background, var(--secondary-background-color));
+}
+
+.markdown-alert-title {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0.5em 0;
+    font-weight: bold;
+    line-height: 1;
+    color: var(--admonition-color, var(--secondary-foreground-color));
+}
+
+.markdown-alert-title svg {
+    display: none;
+}
+
+.markdown-alert-note {
+    --admonition-color: var(--admonition-note-color);
+    --admonition-background: var(--admonition-note-background-color);
+    --admonition-code-background: var(--admonition-note-code-background);
+}
+
+.markdown-alert-tip {
+    --admonition-color: var(--admonition-tip-color);
+    --admonition-background: var(--admonition-tip-background-color);
+    --admonition-code-background: var(--admonition-tip-code-background);
+}
+
+.markdown-alert-important {
+    --admonition-color: var(--admonition-important-color);
+    --admonition-background: var(--admonition-important-background-color);
+    --admonition-code-background: var(--admonition-important-code-background);
+}
+
+.markdown-alert-warning {
+    --admonition-color: var(--admonition-warning-color);
+    --admonition-background: var(--admonition-warning-background-color);
+    --admonition-code-background: var(--admonition-warning-code-background);
+}
+
+.markdown-alert-caution {
+    --admonition-color: var(--admonition-caution-color);
+    --admonition-background: var(--admonition-caution-background-color);
+    --admonition-code-background: var(--admonition-caution-code-background);
 }
 
 ul {

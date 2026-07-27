@@ -78,6 +78,9 @@ footer:
 toc:
   ordered_list: true
 
+gfm_admonitions:
+  inject_css: false
+
 defaults:
   - values:
       layout: "page"
