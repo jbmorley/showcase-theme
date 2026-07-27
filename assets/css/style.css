@@ -100,7 +100,7 @@ body {
 
 a {
     text-decoration: underline;
-    color: var(--brand-color);
+    color: var(--primary-action-background-color);
 }
 
 a:hover {
@@ -291,12 +291,16 @@ ul.navigation > li {
 
 .button, .button:hover {
     color: white;
-    background-color: var(--brand-color);
+    background-color: var(--primary-action-background-color);
     border-radius: 100vh;
     padding: 1rem 1.6rem;
     text-decoration: none;
     display: inline-block;
     font-weight: bold;
+}
+
+.button:hover {
+    background-color: var(--brand-color);
 }
 
 .content {
