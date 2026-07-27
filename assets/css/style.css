@@ -336,6 +336,7 @@ ul.navigation > li {
 .content-sidebar header h1 {
     border-bottom: 0;
     margin-bottom: 1rem;
+    font-size: 36px;
 }
 
 documentation-navigation {
