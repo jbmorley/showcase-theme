@@ -471,3 +471,8 @@ footer nav ul li {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.footnotes {
+    border-top: var(--line-weight) solid var(--secondary-foreground-color);
+    font-size: 13px;
+}
