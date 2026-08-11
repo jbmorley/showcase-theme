@@ -57,6 +57,11 @@ baseurl: ""
 repository: https://github.com/jbmorley/showcase-theme
 copyright: 2025 <a href="https://jbmorley.co.uk/about">Jason Morley</a>
 
+# Optionally include this to override the default download link behaviour.
+primary_action:
+  title: Download
+  href: /releases
+
 navigation:
   - title: Showcase
     href: /
@@ -91,6 +96,16 @@ defaults:
       toc: true
       shows_title: true
 ```
+
+## Components
+
+Timestamps can be displayed as localtime as follows:
+
+```html
+<time is="local-time" datetime="2026-08-06T07:27:00+00:00">6 August 2026 at 07:27 UTC</time>
+```
+
+On browsers with JavaScript enabled, this is upgraded to display in the localtime. For example, the above displays as '5 Aug 2026 at 21:27 HST' in Hawai'i.
 
 ## License
 
