@@ -6,9 +6,13 @@
          height="128" />
     <div class="appname">{{ site.title }}</div>
     <div class="tagline">{{ site.description }}</div>
-    {% if site.env.DOWNLOAD_URL %}
-    <div class="actions">
-        <a class="button no-rewrite" href="{{ site.env.DOWNLOAD_URL }}">Download</a>
-    </div>
+    {% if site.primary_action or site.env.DOWNLOAD_URL %}
+        <div class="actions">
+            {% if site.primary_action %}
+                <a class="button no-rewrite" href="{{ site.primary_action.href }}">{{ site.primary_action.title }}</a>
+            {% else %}
+                <a class="button no-rewrite" href="{{ site.env.DOWNLOAD_URL }}">Download</a>
+            {% endif %}
+        </div>
     {% endif %}
 </div>
