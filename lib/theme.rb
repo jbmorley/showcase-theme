@@ -12,3 +12,4 @@ require "jekyll-toc"
 
 require_relative "theme/file_hash"
 require_relative "theme/file_tree"
+require_relative "theme/not_found"
