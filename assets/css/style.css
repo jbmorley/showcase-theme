@@ -4,7 +4,8 @@
     --showcase-color-low: red;
 
     --primary-foreground-color: #000000;
-    --secondary-foreground-color: gray;
+    --secondary-foreground-color: #808080;
+    --tertiary-foreground-color: #bebebe;
     --primary-background-color: #ffffff;
     --secondary-background-color: #f0f0f0;
     --navigation-background: rgba(255, 255, 255, 0.7);
@@ -38,6 +39,8 @@
     --content-width: 900px;
     --vertical-spacing: 1rem;
 
+    --callout-tertiary-foreground-color: #8e8e8e;
+
     --line-weight: 0.5px;
 
 }
@@ -50,7 +53,8 @@
         --showcase-color-low: red;
 
         --primary-foreground-color: #ffffff;
-        --secondary-foreground-color: gray;
+        --secondary-foreground-color: #808080;
+        --tertiary-foreground-color: #4f4f4f;
         --primary-background-color: #171616;
         --secondary-background-color: #222222;
         --navigation-background: rgba(24, 24, 24, 0.7);
@@ -217,6 +221,10 @@ pre:has(> code.language-mermaid), code.language-mermaid {
 
 ul {
     margin-bottom: calc(2 * var(--vertical-spacing));
+}
+
+li::marker {
+    color: var(--tertiary-foreground-color);
 }
 
 li {
@@ -452,6 +460,10 @@ footer nav ul li {
 
 .showcase img {
     display: block;
+}
+
+.toc {
+    --tertiary-foreground-color: var(--callout-tertiary-foreground-color);
 }
 
 .toc:has(li) {
