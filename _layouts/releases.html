@@ -1,0 +1,27 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{% for release in site.data.releases %}{% if release.assets.size != 0 and release.is_released %}
+<article class="release">
+    <header>
+        <h2>{% if release.commit_url %}<a href="{{ release.commit_url }}">{% endif %}{{ release.name }}{% if release.commit_url %}</a>{% endif %}</h2>{% if release.date %}<time is="local-time" datetime="{{ release.date }}">{{ release.date | with_time_zone: release.time_zone | date: "%-d %B %Y at %H:%M %Z" }}</time>{% endif %}
+    </header>
+
+    <h3>Changes</h3>
+    <ul>
+        {% for change in release.changes.all %}
+            <li>{{ change.description }}{% if change.pr %} &ndash; <a href="{{ change.pr.url }}">PR {{ change.pr.id }}</a>{% endif %}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Downloads</h3>
+    <ul class="downloads">
+        {% for artifact in release.artifacts %}
+            <li><a class="no-rewrite" href="{{ artifact.url }}">{{ artifact.name }}</a></li>
+        {% endfor %}
+    </ul>
+</article>
+{% endif %}{% endfor %}

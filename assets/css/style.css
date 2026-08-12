@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 :root {
+    --main-font-family: 'Bitter', serif;
+    --code-font-family: 'JetBrains Mono', monospace;
+    --main-font-weight: 200;
+    --body-font-size: 17px;
+    --footer-font-size: 15px;
+    --code-font-size: 14px;
     --callout-header-font-size: 15px;
     
     --brand-color: red;
@@ -93,8 +101,8 @@
 
 body {
     font-family: Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 17px;
+    font-weight: var(--main-font-weight);
+    font-size: var(--body-font-size);
     margin: 0;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     background-color: var(--primary-background-color);
@@ -427,7 +435,7 @@ footer {
     padding: 2em;
     text-align: center;
     color: var(--secondary-foreground-color);
-    font-size: 0.9rem;
+    font-size: var(--footer-font-size);
 }
 
 footer a {
@@ -465,6 +473,50 @@ footer nav ul li {
 
 .showcase img {
     display: block;
+}
+
+article.release header {
+    margin-bottom: calc(2 * var(--spacing-unit));
+}
+
+article.release header > * {
+    margin-bottom: 0;
+}
+
+article.release header h2 {
+    display: inline-block;
+}
+
+article.release header time {
+    font-size: var(--footer-font-size);
+    font-weight: var(--main-font-weight);
+}
+
+article.release header time:before {
+    content: " – "
+}
+
+article.release h3 {
+    display: none;
+}
+
+.release-metadata {
+    list-style: none;
+    padding: 0;
+    font-size: var(--footer-font-size);
+    margin-bottom: var(--spacing-unit);
+}
+
+ul.downloads {
+    background-color: var(--secondary-background-color);
+    padding: var(--spacing-unit);
+    margin-bottom: calc(2 * var(--spacing-unit));
+    border-radius: var(--callout-border-radius);
+    list-style: none;
+}
+
+ul.downloads li {
+    margin-left: 0;
 }
 
 .toc {
