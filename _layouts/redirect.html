@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="content">
+    {% if page.title %}
+        <header>
+            <h1>{{ page.title }}</h1>
+        </header>
+    {% endif %}
+    <p>Moved to <a href="{{ page.redirect | relative_url }}">{{ page.redirect | relative_url }}</a>.</p>
+    {{ content }}
+</div>

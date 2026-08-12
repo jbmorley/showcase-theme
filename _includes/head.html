@@ -35,4 +35,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
+    {% if page.redirect %}
+        <meta http-equiv="refresh" content="0; url={{ page.redirect | absolute_url }}" />
+    {% endif %}
+
 </head>
