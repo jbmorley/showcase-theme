@@ -337,6 +337,8 @@ ul.navigation > li {
 .content-sidebar img {
     max-width: 100%;
     height: auto;
+    border-radius: var(--callout-border-radius);
+    dynamic-range-limit: standard;
 }
 
 .content-sidebar {
