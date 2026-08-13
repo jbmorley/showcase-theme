@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll", "~> 4.2"
   spec.add_runtime_dependency "jekyll-environment-variables"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.12"
-  spec.add_runtime_dependency "jekyll-gfm-admonitions"
+  spec.add_runtime_dependency "jekyll-gfm-admonitions", "~> 1.3"
   spec.add_runtime_dependency "jekyll-image-size", "~> 1.2"
   spec.add_runtime_dependency "jekyll-toc"
 end
