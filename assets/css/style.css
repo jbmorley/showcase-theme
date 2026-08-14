@@ -8,7 +8,7 @@
     --footer-font-size: 15px;
     --code-font-size: 14px;
     --callout-header-font-size: 15px;
-    
+
     --brand-color: red;
     --showcase-color-high: red;
     --showcase-color-low: red;
@@ -123,12 +123,18 @@ a:hover {
 }
 
 h1, h2, h3 {
-    margin: 0 0 calc(2 * var(--spacing-unit)) 0;
+    margin: calc(2 * var(--spacing-unit)) 0;
+}
+
+h1, h2, h3 {
+    margin: calc(2 * var(--spacing-unit)) 0 var(--spacing-unit) 0;
 }
 
 header h1 {
     text-align: center;
     font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: calc(2 * var(--spacing-unit));
 }
 
 @media (min-width:768px) {
