@@ -41,7 +41,6 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 ```
 
-
 ## Configuration
 
 The configuration should look something like this:
@@ -106,6 +105,10 @@ Timestamps can be displayed as localtime as follows:
 ```
 
 On browsers with JavaScript enabled, this is upgraded to display in the localtime. For example, the above displays as '5 Aug 2026 at 21:27 HST' in Hawai'i.
+
+## Extending Behavior
+
+- Create `_includes/head_end.html` to add custom HTML before `</head>`.
 
 ## License
 
