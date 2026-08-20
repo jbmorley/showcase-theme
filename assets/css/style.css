@@ -316,8 +316,8 @@ ul.navigation > li {
     margin-bottom: 0;
 }
 
-.icon {
-    margin-bottom: var(--spacing-unit);
+.features img.icon {
+    border-radius: 0;
 }
 
 .appname {
@@ -515,6 +515,7 @@ footer nav ul li {
 
 .showcase img {
     display: block;
+    border-radius: 0;
 }
 
 article.release header {
