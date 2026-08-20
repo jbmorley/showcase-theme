@@ -316,7 +316,7 @@ ul.navigation > li {
     margin-bottom: 0;
 }
 
-.features img.icon {
+.features img.icon, .features img.symbol {
     border-radius: 0;
 }
 
